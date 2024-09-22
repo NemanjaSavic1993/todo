@@ -16,4 +16,10 @@ class Task extends Model
         'status',
         'user_id'
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }
+
+// pozivanje metode user(), $task->user (poziva se kao da je property)

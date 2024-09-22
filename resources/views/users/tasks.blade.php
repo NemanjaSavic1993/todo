@@ -1,5 +1,5 @@
 @section('title')
-List Tasks
+List User Tasks
 @endsection
 
 @extends('app')
@@ -9,7 +9,7 @@ List Tasks
     <div class="row justify-content-center">
 
         <!-- show task -->
-        @foreach($tasks as $task)
+        @foreach($allTasks as $task)
         <div class="col-sm-3 mb-2 mb-sm-0 m-2">
             <div class="card">
                 <div class="card-body">

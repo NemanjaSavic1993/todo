@@ -64,3 +64,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## To do v1 app
+
+Mogu se razdvojiti statusi taska u odvojenu tabelu.
+Pored toga trebalo bi uraditi login i register user-a

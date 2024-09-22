@@ -16,7 +16,13 @@ return new class extends Migration
             $table->string("name");
             $table->text("description");
             $table->enum("status", ["Waiting","Started","In Proccess","Pause","Finished"]);
-            $table->foreignId("user_id");
+
+            // ->references('id')->on('users')->cascadeOnDelete() , brisanje svih taskova koji pripadaju 
+            // nekom useru kada obrisamo samog usera
+            
+            $table->foreignId("user_id")->references('id')->on('users')->cascadeOnDelete();
+
+
             $table->timestamps();
             $table->softDeletes();
         });

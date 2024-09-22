@@ -1,7 +1,3 @@
-@php
-    use App\Http\Controllers\TaskController;
-@endphp
-
 @section('title')
 Task {{ $task->name }}
 @endsection
@@ -28,7 +24,7 @@ Task {{ $task->name }}
                 <a href="#" onclick="event.preventDefault(); document.getElementById('delete-form').submit();" class="btn btn-danger">Delete</a>
             </div>
             <div class="card-footer text-body-secondary">
-                {{ $task->status }}, {{ TaskController::convert($task->updated_at) }} 
+                {{ $task->status }}, {{ convert($task->updated_at) }}, created by {{ $task->user->name }}.
             </div>
         </div>
 

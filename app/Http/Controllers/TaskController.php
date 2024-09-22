@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;
 use App\Http\Controllers\Controller;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -118,9 +117,5 @@ class TaskController extends Controller
         $task->delete();
 
         return redirect('tasks')->with('deleted', 'Task has been deleted');
-    }
-
-    public static function convert($date){
-        return Carbon::parse($date)->format('d.m.Y. H:i');
     }
 }
